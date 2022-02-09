@@ -4,19 +4,20 @@
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" name="" id="" placeholder="Search for a country.." />
     </div>
-    <div>
+    <div class="filter">
       <div class="card">
         <button @click="handleFilter" class="flex-icon">
           <p>Filter by Region</p>
           <i class="fa-solid fa-angle-down"></i>
         </button>
       </div>
-
       <div v-if="show" class="items">
-        <button>dsadasd</button>
-        <button>dsad</button>
-        <button>dasdas</button>
-        <button>dsadasda</button>
+        <div class="regions">
+          <button>dsadasd</button>
+          <button>dsad</button>
+          <button>dasdas</button>
+          <button>dsadasda</button>
+        </div>
       </div>
     </div>
   </div>
@@ -49,17 +50,25 @@ export default {
   align-items: center;
   gap: 25px;
 }
+.flex {
+  align-items: center;
+}
 .search {
   padding: 30px 0;
 }
-.items button {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 6px;
+.items {
+  position: relative;
 }
-.items button {
+.regions {
+  position: absolute;
+  top: 8px;
+}
+.regions button {
   width: 100%;
+  text-align: left;
+}
+
+.filter {
   position: relative;
 }
 </style>
