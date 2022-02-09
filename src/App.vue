@@ -12,6 +12,7 @@
 import Header from "./components/Header.vue";
 import Filter from "./components/Filter.vue";
 import Country from "./components/Countries/";
+
 export default {
   name: "App",
   components: { Header, Filter, Country },
