@@ -1,20 +1,22 @@
 <template>
-  <div class="search">
-    <div class="flex">
-      <div>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" name="" id="" placeholder="Search for a country.." />
-      </div>
-      <div>
-        <button @click="handleFilter">
+  <div class="flex">
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" name="" id="" placeholder="Search for a country.." />
+    </div>
+    <div>
+      <div class="card">
+        <button @click="handleFilter" class="flex-icon">
           <p>Filter by Region</p>
+          <i class="fa-solid fa-angle-down"></i>
         </button>
-        <div v-if="show" class="items">
-          <button>dsadasd</button>
-          <button>dsad</button>
-          <button>dasdas</button>
-          <button>dsadasda</button>
-        </div>
+      </div>
+
+      <div v-if="show" class="items">
+        <button>dsadasd</button>
+        <button>dsad</button>
+        <button>dasdas</button>
+        <button>dsadasda</button>
       </div>
     </div>
   </div>
@@ -37,8 +39,15 @@ export default {
 </script>
 
 <style scoped>
-.flex {
-  align-items: unset;
+.search i {
+  position: relative;
+  left: 30px;
+  color: hsl(204, 2%, 49%);
+}
+.flex-icon {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 .search {
   padding: 30px 0;

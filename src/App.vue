@@ -12,7 +12,6 @@
 import Header from "./components/Header.vue";
 import Filter from "./components/Filter.vue";
 import Country from "./components/Countries/";
-import axios from "axios";
 export default {
   name: "App",
   components: { Header, Filter, Country },
@@ -32,7 +31,8 @@ body {
   color: hsl(200, 15%, 8%);
 }
 input {
-  padding: 15px 20px;
+  padding: 15px 0;
+  padding-left: 45px;
   width: 400px;
   border: none;
   border-radius: 5px;
@@ -64,5 +64,8 @@ button:hover {
 }
 .light-bg {
   background: hsl(0, 0%, 98%);
+}
+.card {
+  background: white;
 }
 </style>
