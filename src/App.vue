@@ -43,6 +43,7 @@ button {
   padding: 15px 20px;
   border-radius: 5px;
   border: none;
+  color: hsl(200, 15%, 8%);
 }
 button:hover {
   cursor: pointer;
