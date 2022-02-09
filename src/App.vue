@@ -3,6 +3,7 @@
     <Header />
     <div class="container">
       <Filter />
+      <Country />
     </div>
   </div>
 </template>
@@ -10,9 +11,11 @@
 <script>
 import Header from "./components/Header.vue";
 import Filter from "./components/Filter.vue";
+import Country from "./components/Countries/";
+import axios from "axios";
 export default {
   name: "App",
-  components: { Header, Filter },
+  components: { Header, Filter, Country },
 };
 </script>
 
