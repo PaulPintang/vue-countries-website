@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="flex">
+    <div class="flex container">
       <div>
         <h1>Where in the world</h1>
       </div>
@@ -19,12 +19,7 @@ export default {
 
 <style scoped>
 .header {
-  height: 100px;
-}
-.header .flex {
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
+  height: 75px;
+  background: hsl(0, 0%, 100%);
 }
 </style>

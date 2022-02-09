@@ -1,6 +1,9 @@
 <template>
-  <div class="container">
+  <div>
     <Header />
+    <div class="container">
+      <Filter />
+    </div>
   </div>
 </template>
 
@@ -23,10 +26,39 @@ export default {
 body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
+  color: hsl(200, 15%, 8%);
+}
+input {
+  padding: 15px 20px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+}
+input:focus {
+  outline: none;
+}
+button {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
 }
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 12px;
+}
+.flex {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.light-bg {
+  background: hsl(0, 0%, 98%);
 }
 </style>
