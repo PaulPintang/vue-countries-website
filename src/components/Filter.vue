@@ -2,6 +2,7 @@
   <div class="search">
     <div class="flex">
       <div>
+        <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" name="" id="" placeholder="Search for a country.." />
       </div>
       <div>
