@@ -1,21 +1,19 @@
-// import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+import CountryDetails from "../views/CountryDetails.vue";
 // import Header from '../views/Home.vue'
 
-// const routes = [
-//   {
-//     path: "/",
-//     name: "Home",
-//     component: Home,
-//   },
-//   {
-//     path: "/about",
-//     name: "About",
-//   },
-// ];
+const routes = [
+  {
+    path: "/Countries/:id",
+    name: "CountryDetails",
+    component: CountryDetails,
+    props: true,
+  },
+];
 
-// const router = createRouter({
-//   history: createWebHistory(process.env.BASE_URL),
-//   routes,
-// });
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
 
-// export default router;
+export default router;

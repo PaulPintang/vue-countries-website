@@ -1,5 +1,6 @@
 <template>
   <div class="flex">
+    <!-- <router-link :to="{ name: 'ContactDetails', params: { id: contact.id } }> -->
     <div v-for="country in countries" class="card">
       <div class="flags-container">
         <img :src="country.flags.png" alt="" />
@@ -15,6 +16,7 @@
         </div>
       </div>
     </div>
+    <!-- </router-link> -->
   </div>
 </template>
 

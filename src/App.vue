@@ -11,7 +11,7 @@
 <script>
 import Header from "./components/Header.vue";
 import Filter from "./components/Filter.vue";
-import Country from "./components/Countries/";
+import Country from "./components/Countries.vue";
 
 export default {
   name: "App",
