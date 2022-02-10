@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="country in countries">
-      <p>{{ country.name.common }}</p>
+      <img :src="country.flags.png" alt="" />
     </div>
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
     axios
       .get("https://restcountries.com/v3.1/all")
       .then((res) => (this.countries = res.data));
+    // .then((res) => console.log(res.data[1].flags.png));
   },
 };
 </script>
