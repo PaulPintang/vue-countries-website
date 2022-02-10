@@ -41,8 +41,9 @@ export default {
 
 <style scoped>
 .search i {
-  position: relative;
-  left: 30px;
+  position: absolute;
+  left: 20px;
+  top: 46px;
   color: hsl(204, 2%, 49%);
 }
 .flex-icon {
@@ -55,6 +56,7 @@ export default {
 }
 .search {
   padding: 30px 0;
+  position: relative;
 }
 .items {
   position: relative;

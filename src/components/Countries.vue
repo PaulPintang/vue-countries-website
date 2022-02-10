@@ -1,22 +1,25 @@
 <template>
   <div class="flex">
-    <!-- <router-link :to="{ name: 'ContactDetails', params: { id: contact.id } }> -->
-    <div v-for="country in countries" class="card">
-      <div class="flags-container">
-        <img :src="country.flags.png" alt="" />
-      </div>
-      <div class="card-container">
-        <h3>{{ country.name.common }}</h3>
-        <div class="c">
-          <p>
-            <span>Population:</span> {{ country.population.toLocaleString() }}
-          </p>
-          <p><span>Region:</span> {{ country.region }}</p>
-          <p><span>Capital:</span> {{ country.capital }}</p>
+    <div v-for="country in countries" :key="country.id">
+      <!-- <router-link :to="{ name: 'CountryDetails', params: { id: country.id } }"> -->
+      <div class="card">
+        <div class="flags-container">
+          <img :src="country.flags.png" alt="" />
+        </div>
+        <div class="card-container">
+          <h3>{{ country.name.common }}</h3>
+          <div class="c">
+            <p>
+              <span>Population:</span>
+              {{ country.population.toLocaleString() }}
+            </p>
+            <p><span>Region:</span> {{ country.region }}</p>
+            <p><span>Capital:</span> {{ country.capital }}</p>
+          </div>
         </div>
       </div>
+      <!-- </router-link> -->
     </div>
-    <!-- </router-link> -->
   </div>
 </template>
 
@@ -34,6 +37,12 @@ export default {
       .get("https://restcountries.com/v3.1/all")
       .then((res) => (this.countries = res.data));
     console.log(this.countries);
+  },
+  computed: {
+    sortedCountry() {
+      // return this.countries.sort();
+      // return this.countries.filter((country) => country.region === "Asia");
+    },
   },
 };
 </script>
@@ -58,10 +67,8 @@ span {
   flex-wrap: wrap;
   row-gap: 30px;
 }
-/* .flags-container {
-} */
 .flags-container img {
-  width: 250px;
+  width: 230px;
   height: 170px;
   border-radius: 8px 8px 0 0;
 }

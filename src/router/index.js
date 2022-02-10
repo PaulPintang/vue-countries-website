@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import CountryDetails from "../views/CountryDetails.vue";
-// import Header from '../views/Home.vue'
 
 const routes = [
   {
-    path: "/Countries/:id",
+    path: "/:id",
     name: "CountryDetails",
     component: CountryDetails,
     props: true,

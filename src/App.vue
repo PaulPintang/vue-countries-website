@@ -4,6 +4,7 @@
     <div class="container">
       <Filter />
       <Country />
+      <router-view />
     </div>
   </div>
 </template>
