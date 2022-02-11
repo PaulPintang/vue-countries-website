@@ -70,4 +70,7 @@ button:hover {
 .card {
   background: white;
 }
+.card:hover {
+  cursor: pointer;
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="header">
     <div class="flex container">
       <div>
-        <h1>Where in the world</h1>
+        <h2>Where in the world?</h2>
       </div>
       <div class="flex">
         <i class="fa-regular fa-moon"></i>

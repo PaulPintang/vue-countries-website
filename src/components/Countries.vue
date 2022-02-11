@@ -1,24 +1,27 @@
 <template>
   <div class="flex">
     <div v-for="country in countries" :key="country.id">
-      <!-- <router-link :to="{ name: 'CountryDetails', params: { id: country.id } }"> -->
-      <div class="card">
-        <div class="flags-container">
-          <img :src="country.flags.png" alt="" />
-        </div>
-        <div class="card-container">
-          <h3>{{ country.name.common }}</h3>
-          <div class="c">
-            <p>
-              <span>Population:</span>
-              {{ country.population.toLocaleString() }}
-            </p>
-            <p><span>Region:</span> {{ country.region }}</p>
-            <p><span>Capital:</span> {{ country.capital }}</p>
+      <div v-if="countries.length">
+        <div class="card">
+          <div class="flags-container">
+            <img :src="country.flags.png" alt="" />
+          </div>
+          <div class="card-container">
+            <h3>{{ country.name.common }}</h3>
+            <div class="c">
+              <p>
+                <span>Population:</span>
+                {{ country.population.toLocaleString() }}
+              </p>
+              <p><span>Region:</span> {{ country.region }}</p>
+              <p><span>Capital:</span> {{ country.capital }}</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- </router-link> -->
+      <div v-else>
+        <h1>loading...</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +53,7 @@ export default {
 <style scoped>
 h3 {
   padding-bottom: 13px;
+  max-width: 200px;
 }
 span {
   font-weight: 600;
