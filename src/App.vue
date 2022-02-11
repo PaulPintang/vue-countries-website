@@ -34,7 +34,7 @@ body {
 }
 input {
   padding: 15px 0;
-  padding-left: 45px;
+  padding-left: 60px;
   width: 400px;
   border: none;
   border-radius: 5px;

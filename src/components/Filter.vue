@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" name="" id="" placeholder="Search for a country.." />
+      <input type="text" name="" id="" placeholder="Search for a country..." />
     </div>
     <div class="filter">
       <div class="card">
@@ -42,7 +42,7 @@ export default {
 <style scoped>
 .search i {
   position: absolute;
-  left: 20px;
+  left: 25px;
   top: 46px;
   color: hsl(204, 2%, 49%);
 }
