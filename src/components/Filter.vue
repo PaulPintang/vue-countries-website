@@ -2,8 +2,15 @@
   <div class="flex">
     <div class="search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="text" name="" id="" placeholder="Search for a country..." />
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="Search for a country..."
+        v-model="country"
+      />
     </div>
+    <span>{{ this.country }}</span>
     <div class="filter">
       <div class="card">
         <button @click="handleFilter" class="flex-icon">
@@ -29,6 +36,7 @@ export default {
   data() {
     return {
       show: false,
+      country: null,
     };
   },
   methods: {
